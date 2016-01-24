@@ -27,7 +27,7 @@ public class UI {
     private JRadioButton copyFromSourceRadioButton;
     private JRadioButton copySourceItselfRadioButton;
     private JPanel panel;
-    private JCheckBox checkHashCheckBox;
+//    private JCheckBox checkHashCheckBox;
     private JSpinner threadsToUseSpinner;
     private JCheckBox checkContentCheckBox;
     private JPanel currentFilesPanel;
@@ -65,8 +65,8 @@ public class UI {
                     selectedStrategies.add(CopyStrategies.SIZE_STRATEGY);
                 if (checkHeadAndTailCheckBox.isSelected())
                     selectedStrategies.add(CopyStrategies.HEAD_TAIL_STRATEGY);
-                if (checkHashCheckBox.isSelected())
-                    selectedStrategies.add(CopyStrategies.HASH_STRATEGY);
+//                if (checkHashCheckBox.isSelected())
+//                    selectedStrategies.add(CopyStrategies.HASH_STRATEGY);
                 if (checkContentCheckBox.isSelected())
                     selectedStrategies.add(CopyStrategies.CONTENT_STRATEGY);
 
@@ -177,7 +177,7 @@ public class UI {
         checkSizeCheckBox.setSelected(prefs.getBoolean("checkSize", true));
         copySourceItselfRadioButton.setSelected(prefs.getBoolean("copySourceItself", false));
         copyFromSourceRadioButton.setSelected(!prefs.getBoolean("copySourceItself", true));
-        checkHashCheckBox.setSelected(prefs.getBoolean("checkHash", false));
+//        checkHashCheckBox.setSelected(prefs.getBoolean("checkHash", false));
         checkContentCheckBox.setSelected(prefs.getBoolean("checkContent", false));
         threadsToUseSpinner.setValue(prefs.getInt("threads", getDefaultNumberOfThreads(Runtime.getRuntime().availableProcessors())));
     }
@@ -189,7 +189,7 @@ public class UI {
         prefs.putBoolean("checkHeadTail", checkHeadAndTailCheckBox.isSelected());
         prefs.putBoolean("checkSize", checkSizeCheckBox.isSelected());
         prefs.putBoolean("copySourceItself", !copyFromSourceRadioButton.isSelected());
-        prefs.putBoolean("checkHash", checkHashCheckBox.isSelected());
+//        prefs.putBoolean("checkHash", checkHashCheckBox.isSelected());
         prefs.putBoolean("checkContent", checkContentCheckBox.isSelected());
         prefs.putInt("threads", numberOfThreadsToUse());
     }
@@ -247,7 +247,7 @@ public class UI {
                 destinationButton,
                 checkModificationTimeCheckBox,
                 checkHeadAndTailCheckBox,
-                checkHashCheckBox,
+//                checkHashCheckBox,
                 checkContentCheckBox,
                 threadsToUseSpinner,
                 checkSizeCheckBox,

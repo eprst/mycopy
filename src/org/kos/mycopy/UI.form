@@ -100,6 +100,7 @@
             </constraints>
             <properties>
               <text value="Check &amp;modification time"/>
+              <toolTipText value="Compares files last modification times"/>
             </properties>
           </component>
           <component id="93e1c" class="javax.swing.JCheckBox" binding="checkSizeCheckBox" default-binding="true">
@@ -109,6 +110,7 @@
             <properties>
               <selected value="true"/>
               <text value="Check &amp;size"/>
+              <toolTipText value="Compares file sizes"/>
             </properties>
           </component>
           <component id="2003c" class="javax.swing.JCheckBox" binding="checkHeadAndTailCheckBox" default-binding="true">
@@ -117,14 +119,7 @@
             </constraints>
             <properties>
               <text value="Check &amp;head and tail"/>
-            </properties>
-          </component>
-          <component id="8f2b4" class="javax.swing.JCheckBox" binding="checkHashCheckBox">
-            <constraints>
-              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Check h&amp;ash"/>
+              <toolTipText value="Compares first and last 4K of the files"/>
             </properties>
           </component>
           <grid id="857c4" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -132,7 +127,9 @@
             <constraints>
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
-            <properties/>
+            <properties>
+              <toolTipText value="How many checking/copying threads to use"/>
+            </properties>
             <border type="none"/>
             <children>
               <component id="e8ca3" class="javax.swing.JLabel">
@@ -147,16 +144,19 @@
                 <constraints>
                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
-                <properties/>
+                <properties>
+                  <toolTipText value="How many checking/copying threads to use"/>
+                </properties>
               </component>
             </children>
           </grid>
           <component id="95212" class="javax.swing.JCheckBox" binding="checkContentCheckBox" default-binding="true">
             <constraints>
-              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value="Check &amp;content"/>
+              <toolTipText value="Compares whole files contents"/>
             </properties>
           </component>
         </children>

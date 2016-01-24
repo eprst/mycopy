@@ -17,7 +17,7 @@ public class CopyStrategies {
 
     public static CopyStrategy HEAD_TAIL_STRATEGY = (src, dst, e) -> {
         if (dst.exists() && dst.length() == src.length()) {
-            int bufSize = Math.min(256, (int) src.length());
+            int bufSize = Math.min(4096, (int) src.length());
 
             if (bufSize <= 0)
                 return true;
