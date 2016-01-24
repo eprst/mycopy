@@ -130,7 +130,7 @@ public class CopyEngine {
                 break;
         }
 
-        while (!futures.isEmpty() && Thread.currentThread().isInterrupted())
+        while (!futures.isEmpty() && !Thread.currentThread().isInterrupted())
             Utils.getFuture(futures.pop());
 
         auxStatusListener.status(String.format("Done! %s",
@@ -184,7 +184,7 @@ public class CopyEngine {
             out.close();
             in.close();
         } catch (IOException e) {
-            // abort(e.getMessage()); // TODO: add log panel and log there
+            // abort(e.getMessage());
             System.out.println(e.getMessage());
         } finally {
             if (currentFileStatus != null)
